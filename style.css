@@ -1,0 +1,586 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: textBlock1;
+
+}
+
+
+@font-face {
+    font-family: logoFont1;
+    src: url(/assets/Fonts/earthorbiter/earthorbiterbold.ttf);
+}
+
+@font-face {
+    font-family: textBlock1;
+    src: url(/assets/Fonts/open_sans/OpenSans-Regular.ttf);
+}
+
+
+
+/* -------------------------------------PARALLAX---------------------------------------- */
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+
+}
+
+.background {
+    width: 100vw;
+    transform: translateZ(-10px) scale(2);
+    object-fit: fill;
+
+}
+
+/* ---------------------------------------HEADER----------------------------------------- */
+
+header {
+    position: relative;
+    justify-content: center;
+    height: 200px;
+
+}
+
+h1 {
+    display: flex;
+    font-size: 65px;
+    margin: auto;
+    margin-top: 300px;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-family: logoFont1;
+}
+
+/* -----------------------------------------NAVBAR-------------------------------------- */
+.navbar {
+    display: flex;
+    left: 0;
+    z-index: 1;
+    background-color: #18383f;
+    color: white;
+    justify-content: center;
+}
+
+.navbar>a {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+    text-decoration: none;
+    cursor: pointer;
+    align-items: flex-start;
+    font-family: textBlock1;
+
+}
+
+.navbar>span {
+
+    margin: 5px;
+}
+
+#mountainDiv {
+    width: 100%;
+}
+
+#mountainDiv>img {
+    width: 100%;
+    object-fit: cover;
+    height: 30vh;
+    margin-top: -300px;
+}
+
+/* ---------------------------------------SEARCH---------------------------------- */
+
+input {
+
+    margin: auto;
+    border-radius: 15px;
+    border: none;
+}
+
+
+/* ----------------------------------------CARDS---------------------------------- */
+
+#contentDiv {
+    display: flex;
+    grid-gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: fixed;
+    background-color: #18383f;
+
+    padding-bottom: 100px;
+}
+
+.coinSymbol {
+    display: inline-block;
+    height: 30px;
+    width: 100px;
+    margin: 0px;
+    margin-top: -30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.coinName {
+    display: inline-block;
+    height: 30px;
+}
+
+.card {
+    display: flex;
+    width: 370px;
+    height: 150px;
+    padding: 10px;
+    padding-top: 5px;
+    background-color: #d7e6e9;
+
+
+}
+
+.card-body>span {
+
+    color: #18383f;
+}
+
+.moreInfo {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 25px;
+    border: 0;
+    border-radius: 15px;
+    color: white;
+    background: #43a1b5;
+    box-shadow: 1px 1px 5px white;
+}
+
+.card-body {
+
+    display: block;
+    padding: 0px;
+    font-size: 10pt;
+}
+
+hr {
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px dotted #43a1b5;
+}
+
+.card-body>img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+
+.collapse {
+    display: flex;
+}
+
+/* -------------------------------TOGGLE BUTTON------------------------------------ */
+.switch {
+
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: 0px;
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+
+
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: #acd7e0;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3px;
+    background-color: #d7e6e9;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #43a1b5;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #43a1b5;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(14px);
+    -ms-transform: translateX(14px);
+    transform: translateX(14px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* -----------------------------------ICON Tramsition________________________________ */
+
+.blink {
+    animation: blink 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: .5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+/* -------------------------------ERROR DIV--------------------------------------- */
+
+.errorDiv {
+    display: none;
+    position: fixed;
+    text-align: center;
+    width: 400px;
+    border-radius: 15px;
+    height: auto;
+    background: #43a1b5;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.errorDataDiv {
+    display: none;
+    position: fixed;
+    text-align: center;
+    width: 400px;
+    border-radius: 15px;
+    height: auto;
+    background: #43a1b5;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 3;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#cancelButton {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: -20px;
+    margin-left: 330px;
+    color: white;
+}
+
+#cancelP {
+    margin: 0px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+.deleteButton {
+
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+
+}
+
+#inDevelopment {
+    color: #acd7e0
+}
+
+/* -----------------------------LOADER-------------------------------------------- */
+
+.loader {
+    visibility: hidden;
+    position: fixed;
+    height: 120px;
+    width: 120px;
+    margin: auto;
+    top: 45%;
+    left: 45%;
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #43a1b5;
+    /* Blue */
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+    z-index: 3;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ---------------------------------------ScrollBar------------------------------ */
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #142f35;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #43a1b5;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #2b6875;
+}
+
+/* -------------------------------------------------------------------------------- */
+@media screen and (max-width: 1280px) {
+
+    .img-avatar {
+        top: 5%;
+        left: 9%;
+    }
+
+    .loader {
+        height: 60px;
+        width: 60px;
+    }
+
+    #mountainDiv>img {
+        width: 100%;
+        object-fit: cover;
+        height: 30vh;
+        margin-top: -200px;
+    }
+
+}
+
+@media screen and (max-width: 912px) {
+
+    .img-avatar {
+        top: 3%;
+        left: 3%;
+    }
+
+    .loader {
+        height: 60px;
+        width: 60px;
+    }
+
+    #mountainDiv>img {
+        width: 100%;
+        object-fit: cover;
+        height: 30vh;
+        margin-top: -200px;
+    }
+
+}
+
+
+@media screen and (max-width: 820px) {
+
+    .img-avatar {
+        top: 3%;
+        left: 5%;
+    }
+
+    .loader {
+        height: 60px;
+        width: 60px;
+    }
+
+    #mountainDiv>img {
+        width: 100%;
+        object-fit: cover;
+        height: 30vh;
+        margin-top: -200px;
+    }
+
+}
+
+@media screen and (max-width: 739px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+
+    .img-avatar {
+        top: 3%;
+        left: 5%;
+    }
+
+    .loader {
+        height: 60px;
+        width: 60px;
+    }
+
+    #mountainDiv>img {
+        width: 100%;
+        object-fit: cover;
+        height: 30vh;
+        margin-top: -200px;
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .img-avatar {
+        top: 1%;
+        left: 3%;
+        width: 100px;
+        height: 100px;
+        background-size: 100px;
+    }
+
+    .loader {
+        height: 60px;
+        width: 60px;
+    }
+
+    .title-total {
+        padding: 5px;
+        width: 71vw;
+    }
+
+    .portada {
+        width: 0;
+    }
+
+    #mountainDiv>img {
+        width: 100%;
+        object-fit: cover;
+        height: 30vh;
+        margin-top: -200px;
+    }
+
+    .about-card .title {
+        text-align: center;
+    }
+
+    .about-card h2 {
+        text-align: center;
+    }
+
+    .about-card .desc {
+        margin-left: -45px;
+        padding: 5px;
+        font-size: 16px;
+    }
+
+
+    .about-card .p {
+        font-size: 16px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 280px) {
+
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
+
+    .img-avatar {
+        top: 1%;
+        left: 1%;
+    }
+
+    .loader {
+        height: 60px;
+        width: 60px;
+    }
+
+    #mountainDiv>img {
+        width: 100%;
+        object-fit: cover;
+        height: 30vh;
+        margin-top: -200px;
+    }
+
+}
