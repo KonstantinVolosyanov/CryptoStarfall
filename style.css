@@ -11,12 +11,12 @@ html {
 
 @font-face {
     font-family: logoFont1;
-    src: url(/assets/Fonts/earthorbiter/earthorbiterbold.ttf);
+    src: url(/CryptoStarfall/assets/Fonts/earthorbiter/earthorbiterbold.ttf);
 }
 
 @font-face {
     font-family: textBlock1;
-    src: url(/assets/Fonts/open_sans/OpenSans-Regular.ttf);
+    src: url(/CryptoStarfall/assets/Fonts/open_sans/OpenSans-Regular.ttf);
 }
 
 
