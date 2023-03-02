@@ -74,7 +74,7 @@
    position: absolute;
    border-radius: 50%;
    border: 4px solid white;
-   background-image: url(/assets/Images/Kostya.jpg);
+   background-image: url(./assets/Images/Kostya.jpg);
    background-size: 200px;
    top: 5%;
    left: 12.5%;
@@ -91,7 +91,7 @@
    height: 100%;
    border-top-left-radius: 20px;
    border-bottom-left-radius: 20px;
-   background-image: url("/assets/Images/mountains_small.png");
+   background-image: url("./assets/Images/mountains_small.png");
    background-position: bottom center;
    background-size: cover;
 }
