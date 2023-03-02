@@ -20,7 +20,7 @@ $(document).ready(function () {
     // Handle Currencies
     async function handleCurrencies() {
         $(".loader").css("visibility", "visible")
-        coins = await getJson("https://api.coingecko.com/api/v3/coins");
+        coins = await getJson("https://api.coingecko.com/api/v3/coins//");
         displayCoins(coins);
     };
 
