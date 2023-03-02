@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     // Parallax:
     $(document, window).SnakeParallax({
-        backgroundImage: "url('/assets/Images/geometrical-patterned-blue-scifi-background_53876-116694.jpg')"
+        backgroundImage: "url('./assets/Images/geometrical-patterned-blue-scifi-background_53876-116694.jpg')"
     });
 
 
