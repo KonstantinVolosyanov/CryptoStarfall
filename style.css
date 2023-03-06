@@ -583,4 +583,14 @@ input:checked+.slider:before {
         margin-top: -200px;
     }
 
+    
+}
+
+#copyrights {
+    color: #43a1b5;
+    background-color: #142f35;
+    margin: 0;
+    width: auto;
+    height: auto;
+    text-align: center;
 }
